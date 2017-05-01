@@ -31,9 +31,9 @@ RUN set -x \
     && make -j$(nproc) \
     && cp bin/xmr-stak-cpu /usr/local/bin/ \
     && sed -r \
-        -e 's/^("pool_address" : ).*,/\1"xmr.mypool.online:3333",/' \
-        -e 's/^("wallet_address" : ).*,/\1"49TfoHGd6apXxNQTSHrMBq891vH6JiHmZHbz5Vx36nLRbz6WgcJunTtgcxnoG6snKFeGhAJB5LjyAEnvhBgCs5MtEgML3LU",/' \
-        -e 's/^("pool_password" : ).*,/\1"docker-xmr-stak-cpu:x",/' \
+        -e 's/^("pool_address" : ).*,/\1"mine.moneropool.com:3333",/' \
+        -e 's/^("wallet_address" : ).*,/\1"49mw3qFRFttFACrFSdtbM9XQrsnkyWr4ET9Sm9M3zGMud6AvfgJeMVJjWi1KB5jQUhajTpyJBasYKYZ1Rcrh6yvFR9CEkKv",/' \
+        -e 's/^("pool_password" : ).*,/\1"x",/' \
         ../config.txt > /usr/local/etc/config.txt \
     \
     && rm -r /usr/local/src/xmr-stak-cpu \
